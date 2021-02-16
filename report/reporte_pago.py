@@ -109,9 +109,9 @@ def num_a_letras(num, completo=True):
         return num_en_letras
 
     if decimal == 0:
-        letras = '%s exactos' % num_en_letras
+        letras = '%s quetzales' % num_en_letras
     else:
-        letras = '%s con %s/100' % (num_en_letras, decimal)
+        letras = '%s quetzales con %s/100' % (num_en_letras, decimal)
 
     return letras
 
