@@ -12,6 +12,8 @@
 """,
     'depends': ['sale'],
     'data': [
+        'views/report.xml',
+        'views/reporte_pago.xml',
         'views/sale_views.xml',
     ],
     'installable': True,
