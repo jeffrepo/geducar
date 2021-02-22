@@ -177,7 +177,7 @@ class ReportePago(models.AbstractModel):
             'doc_ids': docids,
             'doc_model': 'account.move',
             'docs': docs,
-            '_get_pago': self._get_pago,
+            # '_get_pago': self._get_pago,
             'num_a_letras':self.num_a_letras,
             'fecha_actual': self.fecha_actual,
             # 'qr_code_urls': qr_code_urls,
