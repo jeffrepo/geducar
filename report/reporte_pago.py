@@ -142,17 +142,17 @@ class ReportePago(models.AbstractModel):
     def num_a_letras(self, monto):
         return num_a_letras(monto)
 
-    def _get_pago(self,o):
-        logging.warning('HOLA')
-        logging.warning(o._get_reconciled_info_JSON_values())
-
-        json = o._get_reconciled_info_JSON_values()
-        pago = False
-        if json:
-            pago_id = self.env['account.payment'].search([('id','=',json[0]['account_payment_id'])])
-            if pago_id:
-                pago = pago_id
-        return pago
+    # def _get_pago(self,o):
+    #     logging.warning('HOLA')
+    #     logging.warning(o._get_reconciled_info_JSON_values())
+    #
+    #     json = o._get_reconciled_info_JSON_values()
+    #     pago = False
+    #     if json:
+    #         pago_id = self.env['account.payment'].search([('id','=',json[0]['account_payment_id'])])
+    #         if pago_id:
+    #             pago = pago_id
+    #     return pago
 
     def fecha_actual(self):
         logging.warn(datetime.datetime.now())
