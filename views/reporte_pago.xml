@@ -10,14 +10,14 @@
                     <div class="article">
                         <div class="header">
                         </div>
-                        <t t-set="pago" t-value="_get_pago(o)"/>
+                        <!-- <t t-set="pago" t-value="_get_pago(o)"/> -->
                         <div class="page" style="font-family:Futura PT Book;font-size:16px">
                             <br/><br/>
                             <table  style="margin: 0px auto;width:100%;border-right: 2px solid black;border-left: 2px solid black;border-top: 2px solid black;border-bottom: 2px solid black;">
                                 <tr>
                                     <td><img src="/web/binary/company_logo" style="width:50%"/></td>
                                     <td style="width:25%;text-align:left"><strong>RECIBO NO. <br/>FECHA</strong></td>
-                                    <td style="width:25%;text-align:left"><strong><span t-esc="pago.name"/></strong> <br/><span t-esc="fecha_actual()"/></td>
+                                    <td style="width:25%;text-align:left"><strong><span t-esc="o.name"/></strong> <br/><span t-esc="fecha_actual()"/></td>
                                 </tr>
                                 <!-- <tr>
                                   <td></td>
@@ -31,7 +31,7 @@
                                     <td colspan="3" style="text-align:center">RECIBIMOS LA CANTIDAD DE:</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="3" style="text-align:center"><span t-esc="num_a_letras(pago.amount)"/></td>
+                                    <td colspan="3" style="text-align:center"><span t-esc="num_a_letras(o.amount)"/></td>
                                 </tr>
                                 <tr>
                                     <td colspan="3" style="text-align:center;height:45px; vertical-align: middle;"><strong>PAGO CORRESPONDIENTE A:</strong></td>
@@ -43,10 +43,10 @@
                                     <td colspan="3" style="text-align:center;height:45px; vertical-align: middle;"><strong>DETALLE DE PAGO</strong></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="3" style="text-align:center;height:45px; vertical-align: middle;"><span t-esc="pago.ref"/> / <span t-esc="pago.journal_id.name"/><br/>FECHA DE PAGO: <span t-esc="pago.date" t-options='{"widget": "date"}'/></td>
+                                    <td colspan="3" style="text-align:center;height:45px; vertical-align: middle;"><span t-esc="o.ref"/> / <span t-esc="o.journal_id.name"/><br/>FECHA DE PAGO: <span t-esc="o.date" t-options='{"widget": "date"}'/></td>
                                 </tr>
                                 <tr>
-                                    <td style="text-align:center"><strong><span t-esc="pago.amount" t-options="{'widget': 'monetary', 'display_currency': pago.currency_id}"/></strong></td>
+                                    <td style="text-align:center"><strong><span t-esc="o.amount" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/></strong></td>
                                     <td colspan="2" style="text-align:center">
                                         ESTE RECIBO RESPALDA EL PAGO DE LA FACTURA<br/>
                                         <t t-if="o.ref">
