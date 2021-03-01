@@ -10,10 +10,11 @@
     'description': """
 
 """,
-    'depends': ['sale'],
+    'depends': ['sale','account'],
     'data': [
         'views/report.xml',
         'views/reporte_pago.xml',
+        'views/account_move_views.xml',
         'views/sale_views.xml',
     ],
     'installable': True,
